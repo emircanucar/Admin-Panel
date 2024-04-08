@@ -13,10 +13,21 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  display: flex;
 }
 .icon.icon-home {
   background-image: url("../img/icon/home.svg");
+}
+.icon.icon-product {
+  background-image: url("../img/icon/product.svg");
+}
+.icon.icon-add-product {
+  background-image: url("../img/icon/add-product.svg");
+}
+.icon.icon-user {
+  background-image: url("../img/icon/user.svg");
+}
+.icon.icon-link {
+  background-image: url("../img/icon/link.svg");
 }
 
 .side-bar-wrapper {

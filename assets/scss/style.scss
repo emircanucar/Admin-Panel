@@ -13,9 +13,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  display: flex;
   &.icon-home {
     background-image: url("../img/icon/home.svg");
+  }
+  &.icon-product {
+    background-image: url("../img/icon/product.svg");
+  }
+  &.icon-add-product {
+    background-image: url("../img/icon/add-product.svg");
+  }
+  &.icon-user {
+    background-image: url("../img/icon/user.svg");
+  }
+  &.icon-link {
+    background-image: url("../img/icon/link.svg");
   }
 }
 .side-bar-wrapper {
