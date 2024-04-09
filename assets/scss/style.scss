@@ -128,6 +128,32 @@ body {
     background-color: #140064;
     height: 80px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    .top-bar-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &-name {
+        color: #ffffff;
+      }
+      &-img {
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        background-color: #ffffff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }

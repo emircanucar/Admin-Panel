@@ -120,5 +120,29 @@ body {
   background-color: #140064;
   height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.main-wrapper .top-bar .top-bar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-wrapper .top-bar .top-bar-user-name {
+  color: #ffffff;
+}
+.main-wrapper .top-bar .top-bar-user-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-wrapper .top-bar .top-bar-user-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
