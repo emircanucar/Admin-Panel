@@ -6,6 +6,13 @@ body {
   background: linear-gradient(180deg, #cbe3ff 0%, #f1e2ff 100%);
   min-height: 100dvh;
 }
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
 .icon {
   height: 24px;
   width: 24px;
@@ -32,12 +39,33 @@ body {
     filter: brightness(0) saturate(100%) invert(10%) sepia(90%) saturate(7494%)
       hue-rotate(340deg) brightness(89%) contrast(115%);
   }
+  &.icon-close {
+    background-image: url("../img/icon/close.svg");
+  }
+  &.icon-menu {
+    background-image: url("../img/icon/menu.svg");
+    width: 40px;
+    height: 40px;
+  }
 }
 .side-bar-wrapper {
+  z-index: 3;
   position: fixed;
   left: 0;
   height: 100dvh;
   width: var(--navbarWidth);
+  /*visibility: hidden;*/
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 200ms;
+
+  @media (min-width: 992px) {
+    transform: translateX(0);
+
+    display: block;
+    visibility: visible;
+    opacity: 100%;
+  }
   background-color: rgba(0, 58, 199);
 
   .side-bar {
@@ -55,6 +83,26 @@ body {
     align-items: center;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px;
+    position: relative;
+
+    &-close {
+      display: flex;
+      @media (min-width: 992px) {
+        display: none;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      width: 50px;
+      height: 50px;
+      .icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
 
     .side-bar-user {
       width: 90px;
@@ -76,6 +124,7 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow: auto;
       .side-bar-menu-top {
         display: flex;
         flex-direction: column;
@@ -146,9 +195,18 @@ body {
     }
   }
 }
+.show-side-bar {
+  transform: translateX(0);
+
+  visibility: visible;
+  opacity: 100%;
+}
 
 .main-wrapper {
-  padding-left: var(--navbarWidth);
+  padding-left: 0;
+  @media (min-width: 992px) {
+    padding-left: var(--navbarWidth);
+  }
   .top-bar {
     position: sticky;
     top: 0;
@@ -208,7 +266,6 @@ body {
           background-color: #ffffff;
           text-decoration: none;
           color: #000000;
-          padding: 5px 10px;
           display: flex;
           align-items: center;
           justify-content: space-between;

@@ -12,8 +12,11 @@
 
 <body>
   <aside>
-    <div class="side-bar-wrapper">
+    <div class="side-bar-wrapper" id="side-bar-wrapper">
       <div class="side-bar">
+        <button class="side-bar-close" onclick="showSideBar()">
+          <i class="icon icon-close"></i>
+        </button>
         <div class="side-bar-user">
           <img src="assets/img/user/user.png" alt="" />
         </div>
@@ -45,6 +48,7 @@
                 Kullanıcılar
               </div>
             </a>
+
           </div>
           <div class="side-bar-menu-bottom">
             <a href="#?" class="side-bar-menu-bottom-item px-3">
@@ -62,15 +66,19 @@
   <main>
     <div class="main-wrapper">
       <div class="top-bar px-4">
-        <span class="text-white fs-5">Hoşgeldiniz</span>
+        <div class="d-flex align-items-center justify-content-center gap-0 gap-lg-3">
+          <button class="d-flex d-lg-none" onclick="showSideBar()"><i class="icon icon-menu"></i></button>
+          <span class="text-white fs-5 d-none d-md-block">Hoşgeldiniz</span>
+        </div>
         <div class="top-bar-user" tabindex="1">
           <div class="top-bar-user-name">Admin</div>
           <div class="top-bar-user-img">
             <img src="assets/img/user/user.png" alt="kullanici" />
           </div>
           <div class="top-bar-user-menu">
-            <a href="#" class="top-bar-user-menu-item"><span>Profil</span><i class="icon icon-user"></i></a>
-            <a href="#" class="top-bar-user-menu-item"><span class="text-danger">Çıkış Yap</span><i
+            <a href="#" class="top-bar-user-menu-item p-3 border-bottom"><span>Profil</span><i
+                class="icon icon-user"></i></a>
+            <a href="#" class="top-bar-user-menu-item p-3"><span class="text-danger">Çıkış Yap</span><i
                 class="icon icon-exit"></i></a>
           </div>
         </div>
@@ -78,72 +86,72 @@
 
       <div class="content-wrapper p-2 p-2 p-sm-4 p-md-4">
         <div class="row g-3">
-          <div class="col-3">
+          <div class="col-12 col-md-3">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-12 col-md-9">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-md-5">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-12 col-md-9">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-md-3">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-md-12">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-md-5">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-9">
+          <div class="col-12 col-md-9">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-12 col-md-3">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-12 col-md-12">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-md-5">
             <div class="bg-white rounded p-5 d-flex justify-content-center align-items-center">
               content
             </div>
@@ -156,6 +164,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
