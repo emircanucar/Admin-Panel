@@ -27,13 +27,18 @@ body {
   &.icon-link {
     background-image: url("../img/icon/link.svg");
   }
+  &.icon-exit {
+    background-image: url("../img/icon/exit.svg");
+    filter: brightness(0) saturate(100%) invert(10%) sepia(90%) saturate(7494%)
+      hue-rotate(340deg) brightness(89%) contrast(115%);
+  }
 }
 .side-bar-wrapper {
   position: fixed;
   left: 0;
   height: 100dvh;
   width: var(--navbarWidth);
-  background-color: #140064;
+  background-color: rgba(0, 58, 199);
 
   .side-bar {
     width: 100%;
@@ -147,16 +152,23 @@ body {
   .top-bar {
     position: sticky;
     top: 0;
-    background-color: #140064;
+    background: rgb(71, 0, 182);
+    background: linear-gradient(
+      270deg,
+      rgba(71, 0, 182, 1) 0%,
+      rgba(0, 58, 199, 1) 100%
+    );
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .top-bar-user {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 10px;
+      cursor: pointer;
 
       &-name {
         color: #ffffff;
@@ -175,6 +187,40 @@ body {
           width: 100%;
           object-fit: cover;
         }
+      }
+      &-menu {
+        width: 150px;
+        position: absolute;
+        top: 100%;
+        right: 5px;
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        transition: 100ms all;
+        &-item {
+          background-color: #ffffff;
+          text-decoration: none;
+          color: #000000;
+          padding: 5px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &:hover {
+            background-color: #eaeaea;
+          }
+        }
+      }
+      &:focus-within .top-bar-user-menu {
+        opacity: 100%;
+        visibility: visible;
       }
     }
   }
